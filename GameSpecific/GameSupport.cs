@@ -106,15 +106,15 @@ namespace LiveSplit.Portal2Split.GameSpecific
 
         public static GameSupport Select()
         {
-            string[] optionNames = { "Portal 2 (July 2009)", "Portal 2 (Retail)" };
-            Type[] optionClasses = { typeof(Portal2_2009), typeof(Portal2) };
+            string[] optionNames = { "Portal 2 (July 2009)", "Portal 2 (Retail)", "Portal Stories: Mel", "Aperture Tag", "Portal", "The Flash Version Mappack"};
+            Type[] optionClasses = { typeof(Portal2_2009), typeof(Portal2), typeof(PortalStoriesMel), typeof(ApertureTag), typeof(Portal), typeof(PortalTFV) };
             Form prompt = new Form()
             {
                 AutoSize = true,
                 AutoSizeMode = AutoSizeMode.GrowAndShrink,
                 MaximumSize = new Size(0, 0),
                 FormBorderStyle = FormBorderStyle.FixedDialog,
-                Text = "Build selection.",
+                Text = "Game selection",
                 StartPosition = FormStartPosition.CenterScreen,
                 MaximizeBox = false,
                 MinimizeBox = false
@@ -129,7 +129,7 @@ namespace LiveSplit.Portal2Split.GameSpecific
                 WrapContents = false,
                 AutoScroll = false
             };
-            Label descriptionLabel = new Label() { Left = 20, Top = 15, Text = "Which build will this be?", Width = 160, AutoSize = true };
+            Label descriptionLabel = new Label() { Left = 20, Top = 15, Text = "Which game will this be?", Width = 160, AutoSize = true };
 
             ListBox optionsList = new ListBox
             {
