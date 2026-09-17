@@ -31,44 +31,6 @@ namespace LiveSplit.Portal2Split
         public string[] MapWhitelist => GetListboxValues(this.lbMapWhitelist);
         public string[] MapBlacklist => GetListboxValues(this.lbMapBlacklist);
 
-        public string[] GameProcesses
-        {
-            get {
-                lock (_lock)
-                    return GetListboxValues(this.lbGameProcesses);
-            }
-        }
-
-        public GameTimingMethodSetting GameTimingMethod
-        {
-            get
-            {
-                switch ((string)this.cmbTimingMethod.SelectedItem)
-                {
-                    case "Engine Ticks":
-                        return GameTimingMethodSetting.EngineTicks;
-                    case "Engine Ticks with Pauses":
-                        return GameTimingMethodSetting.EngineTicksWithPauses;
-                    default:
-                        return GameTimingMethodSetting.Automatic;
-                }
-            }
-            set
-            {
-                switch (value)
-                {
-                    case GameTimingMethodSetting.EngineTicks:
-                        this.cmbTimingMethod.SelectedItem = "Engine Ticks";
-                        break;
-                    case GameTimingMethodSetting.EngineTicksWithPauses:
-                        this.cmbTimingMethod.SelectedItem = "Engine Ticks with Pauses";
-                        break;
-                    default:
-                        this.cmbTimingMethod.SelectedItem = "Automatic";
-                        break;
-                }
-            }
-        }
 
         private readonly object _lock = new object();
 
@@ -92,19 +54,11 @@ namespace LiveSplit.Portal2Split
             this.rdoInterval.CheckedChanged += rdoAutoSplitType_CheckedChanged;
             this.chkAutoSplitEnabled.CheckedChanged += UpdateDisabledControls;
 
-            // defaults
-            this.lbGameProcesses.Rows.Add("hl2.exe");
-            this.lbGameProcesses.Rows.Add("portal2.exe");
-            this.lbGameProcesses.Rows.Add("dearesther.exe");
-            this.lbGameProcesses.Rows.Add("mm.exe");
-            this.lbGameProcesses.Rows.Add("EYE.exe");
-            this.lbGameProcesses.Rows.Add("bms.exe");
             this.SplitInterval = DEFAULT_SPLITINTERVAL;
             this.AutoSplitType = DEFAULT_AUTOSPLITYPE;
             this.ShowGameTime = DEFAULT_SHOWGAMETIME;
             this.AutoSplitEnabled = DEFAULT_AUTOSPLIT_ENABLED;
             this.AutoStartEndResetEnabled = DEFAULT_AUTOSTARTENDRESET_ENABLED;
-            this.GameTimingMethod = DEFAULT_GAME_TIMING_METHOD;
 
             this.UpdateDisabledControls(this, EventArgs.Empty);
         }
@@ -134,14 +88,9 @@ namespace LiveSplit.Portal2Split
             string blacklist = String.Join("|", this.MapBlacklist);
             settingsNode.AppendChild(ToElement(doc, nameof(this.MapBlacklist), blacklist));
 
-            string gameProcesses = String.Join("|", this.GameProcesses);
-            settingsNode.AppendChild(ToElement(doc, nameof(this.GameProcesses), gameProcesses));
-
             settingsNode.AppendChild(ToElement(doc, nameof(this.AutoSplitType), this.AutoSplitType));
 
             settingsNode.AppendChild(ToElement(doc, nameof(this.ShowGameTime), this.ShowGameTime));
-
-            settingsNode.AppendChild(ToElement(doc, nameof(this.GameTimingMethod), this.GameTimingMethod));
 
             settingsNode.AppendChild(ToElement(doc, nameof(this.AutoStartEndResetEnabled), this.AutoStartEndResetEnabled));
 
@@ -169,10 +118,6 @@ namespace LiveSplit.Portal2Split
                 (Boolean.TryParse(settings[nameof(this.ShowGameTime)].InnerText, out bval) ? bval : DEFAULT_SHOWGAMETIME)
                 : DEFAULT_SHOWGAMETIME;
 
-            GameTimingMethodSetting gtm;
-            this.GameTimingMethod = settings[nameof(this.GameTimingMethod)] != null ?
-                Enum.TryParse(settings[nameof(this.GameTimingMethod)].InnerText, out gtm) ? gtm : DEFAULT_GAME_TIMING_METHOD
-                : DEFAULT_GAME_TIMING_METHOD;
 
             AutoSplitType splitType;
             this.AutoSplitType = settings[nameof(this.AutoSplitType)] != null ?
@@ -190,14 +135,6 @@ namespace LiveSplit.Portal2Split
             string blacklist = settings[nameof(this.MapBlacklist)]?.InnerText ?? String.Empty;
             foreach (string map in blacklist.Split('|'))
                 this.lbMapBlacklist.Rows.Add(map);
-
-            lock (_lock)
-            {
-                this.lbGameProcesses.Rows.Clear();
-                string gameProcesses = settings[nameof(this.GameProcesses)]?.InnerText ?? String.Empty;
-                foreach (string process in gameProcesses.Split('|'))
-                    this.lbGameProcesses.Rows.Add(process);
-            }
         }
 
         void rdoAutoSplitType_CheckedChanged(object sender, EventArgs e)

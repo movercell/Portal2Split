@@ -48,15 +48,7 @@ namespace LiveSplit.Portal2Split
         {
             get
             {
-                switch (this.Settings.GameTimingMethod)
-                {
-                    case GameTimingMethodSetting.EngineTicks:
-                        return GameTimingMethod.EngineTicks;
-                    case GameTimingMethodSetting.EngineTicksWithPauses:
-                        return GameTimingMethod.EngineTicksWithPauses;
-                    default:
-                        return _gameRecommendedTimingMethod;
-                }
+                return _gameRecommendedTimingMethod;
             } 
         }
 

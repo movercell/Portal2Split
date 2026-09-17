@@ -354,7 +354,7 @@ namespace LiveSplit.Portal2Split
             var sw = Stopwatch.StartNew();
 #endif
 
-            string[] procs = _settings.GameProcesses.Select(x => x.ToLower().Replace(".exe", String.Empty)).ToArray();
+            string[] procs = { "hl2.exe", "portal2.exe" };
             p = Process.GetProcesses().FirstOrDefault(x => procs.Contains(x.ProcessName.ToLower()));
             offsets = new GameOffsets();
 
