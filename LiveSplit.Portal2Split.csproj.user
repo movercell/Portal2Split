@@ -5,4 +5,9 @@
     <StartProgram>H:\Software\LiveSplit\LiveSplit.exe</StartProgram>
     <StartWorkingDirectory>H:\Software\LiveSplit\</StartWorkingDirectory>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|AnyCPU'">
+    <StartAction>Program</StartAction>
+    <StartProgram>H:\Software\LiveSplit\LiveSplit.exe</StartProgram>
+    <StartWorkingDirectory>H:\Software\LiveSplit\</StartWorkingDirectory>
+  </PropertyGroup>
 </Project>

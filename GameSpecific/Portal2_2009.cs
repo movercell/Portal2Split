@@ -14,7 +14,7 @@ namespace LiveSplit.Portal2Split.GameSpecific
         private int _playerSuppressingCrosshairOffset = -1;
         private bool _prevCrosshairSuppressed;
         private bool _onceFlag;
-        private const int VAULT_SAVE_TICK = 3279;
+        private const int VAULT_SAVE_TICK = 3155;
 
         public Portal2_2009()
         {
@@ -52,12 +52,12 @@ namespace LiveSplit.Portal2Split.GameSpecific
         {
             if (this.IsFirstMap)
             {
-                // vault save starts at tick 4261, but update interval may miss it so be a little lenient
+                // vault save starts at tick 3155, but update interval may miss it so be a little lenient
                 if ((state.TickBase >= VAULT_SAVE_TICK && state.TickBase <= VAULT_SAVE_TICK+4) && !_onceFlag)
                 {
                     _onceFlag = true;
                     int ticksSinceVaultSaveTick = state.TickBase - VAULT_SAVE_TICK; // account for missing ticks if update interval missed it
-                    this.StartOffsetTicks = -3534 - ticksSinceVaultSaveTick; // 53.01 seconds
+                    this.StartOffsetTicks = -2428 - ticksSinceVaultSaveTick; // 47.something seconds
                     return GameSupportResult.PlayerGainedControl;
                 }
 
