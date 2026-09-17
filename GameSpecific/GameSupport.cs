@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Diagnostics;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace LiveSplit.Portal2Split.GameSpecific
@@ -102,37 +104,64 @@ namespace LiveSplit.Portal2Split.GameSpecific
             return GameSupportResult.DoNothing;
         }
 
-        public static GameSupport FromGameDir(string gameDir)
+        public static GameSupport Select()
         {
-            switch (gameDir.ToLower())
+            string[] optionNames = { "Portal 2 (July 2009)", "Portal 2 (Retail)" };
+            Type[] optionClasses = { typeof(Portal2_2009), typeof(Portal2) };
+            Form prompt = new Form()
             {
-                case "hl2oe":
-                case "hl2":
-                case "ghosting":
-                case "ghostingmod":
-                    return new HL2();
-                case "episodic":
-                    return new HL2Ep1();
-                case "ep2":
-                    return new HL2Ep2();
-                case "portal":
-                case "portalelevators":
-                    return new Portal();
-                case "portal_tfv":
-                    return new PortalTFV();
-                case "portal2":
-                    DialogResult is2009 = MessageBox.Show("Will this be the July 2009 build?", "Version selection", MessageBoxButtons.YesNo);
-                    
-                    if (is2009 == DialogResult.Yes)
-                        return new Portal2_2009();
-                    else
-                        return new Portal2();
-                case "aperturetag":
-                    return new ApertureTag();
-                case "portal_stories":
-                    return new PortalStoriesMel();
-                case "bms":
-                    return new BMSRetail();
+                AutoSize = true,
+                AutoSizeMode = AutoSizeMode.GrowAndShrink,
+                MaximumSize = new Size(0, 0),
+                FormBorderStyle = FormBorderStyle.FixedDialog,
+                Text = "Build selection.",
+                StartPosition = FormStartPosition.CenterScreen,
+                MaximizeBox = false,
+                MinimizeBox = false
+            };
+
+            FlowLayoutPanel flow = new FlowLayoutPanel()
+            {
+                AutoSize = true,
+                AutoSizeMode = AutoSizeMode.GrowAndShrink,
+                MaximumSize = new Size(0, 0),
+                FlowDirection = FlowDirection.TopDown,
+                WrapContents = false,
+                AutoScroll = false
+            };
+            Label descriptionLabel = new Label() { Left = 20, Top = 15, Text = "Which build will this be?", Width = 160, AutoSize = true };
+
+            ListBox optionsList = new ListBox
+            {
+                Left = 20,
+                Top = 40,
+                Width = 160,
+                Height = 160,
+                SelectionMode = SelectionMode.One,
+                DataSource = optionNames
+            };
+
+            Button confirmButton = new Button()
+            {
+                Anchor = AnchorStyles.Right,
+                Text = "Proceed.",
+                Width = 80,
+                Height = 25,
+                DialogResult = DialogResult.OK
+            };
+
+            optionsList.DoubleClick += (sender, e) => { if (optionsList.SelectedItem != null) prompt.DialogResult = DialogResult.OK; };
+            confirmButton.Click += (sender, e) => { prompt.Close(); };
+
+            flow.Controls.Add(descriptionLabel);
+            flow.Controls.Add(optionsList);
+            flow.Controls.Add(confirmButton);
+            prompt.Controls.Add(flow);
+            prompt.AcceptButton = confirmButton;
+
+            if (prompt.ShowDialog() == DialogResult.OK && optionsList.SelectedItem != null)
+            {
+                return (GameSupport)System.Activator.CreateInstance(optionClasses[optionsList.SelectedIndex]);
             }
 
             return null;

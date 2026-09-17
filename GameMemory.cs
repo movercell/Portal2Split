@@ -354,7 +354,7 @@ namespace LiveSplit.Portal2Split
             var sw = Stopwatch.StartNew();
 #endif
 
-            string[] procs = { "hl2.exe", "portal2.exe" };
+            string[] procs = { "hl2", "portal2" };
             p = Process.GetProcesses().FirstOrDefault(x => procs.Contains(x.ProcessName.ToLower()));
             offsets = new GameOffsets();
 
@@ -512,10 +512,10 @@ namespace LiveSplit.Portal2Split
             state.GameProcess.ReadValue(state.GameOffsets.GlobalEntityListPtr + (4 * 7), out serial);
             state.GameOffsets.EntInfoSize = (serial > 0 && serial < SERIAL_MASK) ? CEntInfoSize.Portal2 : CEntInfoSize.HL2;
 
-            state.GameSupport = GameSupport.FromGameDir(state.GameDir);
+            state.GameSupport = GameSupport.Select();
             if (state.GameSupport != null)
             {
-                Debug.WriteLine("running game-specific code for: " + state.GameDir);
+                Debug.WriteLine("running game-specific code for: " + state.GameSupport.GetType().Name);
                 state.GameSupport.OnGameAttached(state);
             }
             this.SendSetTimingMethodEvent(state.GameSupport?.GameTimingMethod ?? GameTimingMethod.EngineTicks);

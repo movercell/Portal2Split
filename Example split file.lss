@@ -1,0 +1,338 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Run version="1.7.0">
+  <GameIcon />
+  <GameName>Portal 2 (July 2009 build)</GameName>
+  <CategoryName>Out of Bounds, SLA</CategoryName>
+  <LayoutPath>
+  </LayoutPath>
+  <Metadata>
+    <Run id="" />
+    <Platform usesEmulator="False">
+    </Platform>
+    <Region>
+    </Region>
+    <Variables />
+    <CustomVariables />
+  </Metadata>
+  <Offset>00:00:00</Offset>
+  <AttemptCount>0</AttemptCount>
+  <AttemptHistory>
+    <Attempt id="1" started="09/06/2026 09:57:38" isStartedSynced="True" ended="09/06/2026 10:17:53" isEndedSynced="True">
+      <RealTime>00:20:14.6138026</RealTime>
+    </Attempt>
+    <Attempt id="2" started="09/06/2026 07:53:57" isStartedSynced="False" ended="09/06/2026 07:54:51" isEndedSynced="False" />
+    <Attempt id="3" started="09/06/2026 07:55:17" isStartedSynced="False" ended="09/06/2026 08:12:57" isEndedSynced="False" />
+    <Attempt id="4" started="09/08/2026 15:04:58" isStartedSynced="True" ended="09/08/2026 15:24:10" isEndedSynced="True">
+      <RealTime>00:19:11.8414672</RealTime>
+      <GameTime>00:16:34.0670000</GameTime>
+    </Attempt>
+    <Attempt id="5" started="09/08/2026 17:00:54" isStartedSynced="False" ended="09/08/2026 17:18:02" isEndedSynced="True">
+      <RealTime>00:17:05.7373886</RealTime>
+      <GameTime>00:15:20.6170000</GameTime>
+    </Attempt>
+    <Attempt id="6" started="09/10/2026 08:29:34" isStartedSynced="False" ended="09/10/2026 08:45:10" isEndedSynced="True">
+      <RealTime>00:15:35.6082578</RealTime>
+      <GameTime>00:13:53.2670000</GameTime>
+    </Attempt>
+    <Attempt id="7" started="09/10/2026 10:37:22" isStartedSynced="False" ended="09/10/2026 10:37:51" isEndedSynced="True" />
+    <Attempt id="8" started="09/10/2026 10:38:03" isStartedSynced="True" ended="09/10/2026 10:38:11" isEndedSynced="True" />
+    <Attempt id="9" started="09/10/2026 10:38:32" isStartedSynced="True" ended="09/10/2026 10:57:27" isEndedSynced="True">
+      <RealTime>00:18:55.2029731</RealTime>
+      <GameTime>00:16:02</GameTime>
+    </Attempt>
+    <Attempt id="10" started="09/14/2026 13:00:11" isStartedSynced="False" ended="09/14/2026 13:16:28" isEndedSynced="False">
+      <RealTime>00:16:17.1295904</RealTime>
+      <GameTime>00:14:27.6500000</GameTime>
+    </Attempt>
+    <Attempt id="11" started="09/14/2026 13:17:19" isStartedSynced="False" ended="09/14/2026 13:32:50" isEndedSynced="True">
+      <RealTime>00:15:30.1241632</RealTime>
+      <GameTime>00:13:14.4170000</GameTime>
+    </Attempt>
+    <Attempt id="12" started="09/17/2026 14:25:32" isStartedSynced="False" ended="09/17/2026 14:42:44" isEndedSynced="True">
+      <RealTime>00:17:11.8673949</RealTime>
+      <GameTime>00:16:10.7830000</GameTime>
+    </Attempt>
+  </AttemptHistory>
+  <Segments>
+    <Segment>
+      <Name>Intro</Name>
+      <Icon />
+      <SplitTimes>
+        <SplitTime name="Personal Best">
+          <RealTime>00:03:30.7516544</RealTime>
+          <GameTime>00:04:05.3670000</GameTime>
+        </SplitTime>
+      </SplitTimes>
+      <BestSegmentTime>
+        <RealTime>00:03:30.7516544</RealTime>
+        <GameTime>00:04:05.3670000</GameTime>
+      </BestSegmentTime>
+      <SegmentHistory>
+        <Time id="1">
+          <RealTime>00:20:14.6138026</RealTime>
+        </Time>
+        <Time id="0">
+          <RealTime>00:04:03.8565943</RealTime>
+        </Time>
+        <Time id="12">
+          <RealTime>00:03:30.7516544</RealTime>
+          <GameTime>00:04:05.3670000</GameTime>
+        </Time>
+      </SegmentHistory>
+    </Segment>
+    <Segment>
+      <Name>Wakeup</Name>
+      <Icon />
+      <SplitTimes>
+        <SplitTime name="Personal Best">
+          <RealTime>00:04:39.2461605</RealTime>
+          <GameTime>00:04:55.6000000</GameTime>
+        </SplitTime>
+      </SplitTimes>
+      <BestSegmentTime>
+        <RealTime>00:01:04.3255451</RealTime>
+        <GameTime>00:00:50.2330000</GameTime>
+      </BestSegmentTime>
+      <SegmentHistory>
+        <Time id="0">
+          <RealTime>00:01:04.3255451</RealTime>
+        </Time>
+        <Time id="12">
+          <RealTime>00:01:08.4945061</RealTime>
+          <GameTime>00:00:50.2330000</GameTime>
+        </Time>
+      </SegmentHistory>
+    </Segment>
+    <Segment>
+      <Name>Laser course</Name>
+      <Icon />
+      <SplitTimes>
+        <SplitTime name="Personal Best">
+          <RealTime>00:06:01.5193876</RealTime>
+          <GameTime>00:06:04.4000000</GameTime>
+        </SplitTime>
+      </SplitTimes>
+      <BestSegmentTime>
+        <RealTime>00:01:10.2494518</RealTime>
+        <GameTime>00:01:08.8000000</GameTime>
+      </BestSegmentTime>
+      <SegmentHistory>
+        <Time id="0">
+          <RealTime>00:01:43.5891489</RealTime>
+        </Time>
+        <Time id="12">
+          <RealTime>00:01:22.2732271</RealTime>
+          <GameTime>00:01:08.8000000</GameTime>
+        </Time>
+      </SegmentHistory>
+    </Segment>
+    <Segment>
+      <Name>Post-laser hub</Name>
+      <Icon />
+      <SplitTimes>
+        <SplitTime name="Personal Best">
+          <RealTime>00:06:14.0506496</RealTime>
+          <GameTime>00:06:15.8500000</GameTime>
+        </SplitTime>
+      </SplitTimes>
+      <BestSegmentTime>
+        <RealTime>00:00:12.1316471</RealTime>
+        <GameTime>00:00:11.4500000</GameTime>
+      </BestSegmentTime>
+      <SegmentHistory>
+        <Time id="0">
+          <RealTime>00:00:13.6148884</RealTime>
+        </Time>
+        <Time id="12">
+          <RealTime>00:00:12.5312620</RealTime>
+          <GameTime>00:00:11.4500000</GameTime>
+        </Time>
+      </SegmentHistory>
+    </Segment>
+    <Segment>
+      <Name>Slow course</Name>
+      <Icon />
+      <SplitTimes>
+        <SplitTime name="Personal Best">
+          <RealTime>00:07:47.8751869</RealTime>
+          <GameTime>00:07:28.4170000</GameTime>
+        </SplitTime>
+      </SplitTimes>
+      <BestSegmentTime>
+        <RealTime>00:01:15.4428007</RealTime>
+        <GameTime>00:01:12.5670000</GameTime>
+      </BestSegmentTime>
+      <SegmentHistory>
+        <Time id="0">
+          <RealTime>00:01:20.6303269</RealTime>
+        </Time>
+        <Time id="12">
+          <RealTime>00:01:33.8245373</RealTime>
+          <GameTime>00:01:12.5670000</GameTime>
+        </Time>
+      </SegmentHistory>
+    </Segment>
+    <Segment>
+      <Name>Post-Slow hub</Name>
+      <Icon />
+      <SplitTimes>
+        <SplitTime name="Personal Best">
+          <RealTime>00:08:00.0387986</RealTime>
+          <GameTime>00:07:39.5170000</GameTime>
+        </SplitTime>
+      </SplitTimes>
+      <BestSegmentTime>
+        <RealTime>00:00:12.1636117</RealTime>
+        <GameTime>00:00:11.1000000</GameTime>
+      </BestSegmentTime>
+      <SegmentHistory>
+        <Time id="0">
+          <RealTime>00:00:15.5517409</RealTime>
+        </Time>
+        <Time id="12">
+          <RealTime>00:00:12.1636117</RealTime>
+          <GameTime>00:00:11.1000000</GameTime>
+        </Time>
+      </SegmentHistory>
+    </Segment>
+    <Segment>
+      <Name>Catapult course</Name>
+      <Icon />
+      <SplitTimes>
+        <SplitTime name="Personal Best">
+          <RealTime>00:12:27.9491900</RealTime>
+          <GameTime>00:12:00.7170000</GameTime>
+        </SplitTime>
+      </SplitTimes>
+      <BestSegmentTime>
+        <RealTime>00:02:21.7925626</RealTime>
+        <GameTime>00:04:21.2000000</GameTime>
+      </BestSegmentTime>
+      <SegmentHistory>
+        <Time id="0">
+          <RealTime>00:02:32.9474725</RealTime>
+        </Time>
+        <Time id="12">
+          <RealTime>00:04:27.9103914</RealTime>
+          <GameTime>00:04:21.2000000</GameTime>
+        </Time>
+      </SegmentHistory>
+    </Segment>
+    <Segment>
+      <Name>Post-catapult hub</Name>
+      <Icon />
+      <SplitTimes>
+        <SplitTime name="Personal Best">
+          <RealTime>00:12:40.3088698</RealTime>
+          <GameTime>00:12:11.9670000</GameTime>
+        </SplitTime>
+      </SplitTimes>
+      <BestSegmentTime>
+        <RealTime>00:00:12.3596798</RealTime>
+        <GameTime>00:00:11.2500000</GameTime>
+      </BestSegmentTime>
+      <SegmentHistory>
+        <Time id="0">
+          <RealTime>00:00:13.1479179</RealTime>
+        </Time>
+        <Time id="12">
+          <RealTime>00:00:12.3596798</RealTime>
+          <GameTime>00:00:11.2500000</GameTime>
+        </Time>
+      </SegmentHistory>
+    </Segment>
+    <Segment>
+      <Name>Wall course</Name>
+      <Icon />
+      <SplitTimes>
+        <SplitTime name="Personal Best">
+          <RealTime>00:13:59.5516206</RealTime>
+          <GameTime>00:13:20.2170000</GameTime>
+        </SplitTime>
+      </SplitTimes>
+      <BestSegmentTime>
+        <RealTime>00:01:03.8851677</RealTime>
+        <GameTime>00:01:08.2500000</GameTime>
+      </BestSegmentTime>
+      <SegmentHistory>
+        <Time id="0">
+          <RealTime>00:01:09.0735480</RealTime>
+        </Time>
+        <Time id="12">
+          <RealTime>00:01:19.2427508</RealTime>
+          <GameTime>00:01:08.2500000</GameTime>
+        </Time>
+      </SegmentHistory>
+    </Segment>
+    <Segment>
+      <Name>Post-wall hub</Name>
+      <Icon />
+      <SplitTimes>
+        <SplitTime name="Personal Best">
+          <RealTime>00:14:12.7699352</RealTime>
+          <GameTime>00:13:32.3330000</GameTime>
+        </SplitTime>
+      </SplitTimes>
+      <BestSegmentTime>
+        <RealTime>00:00:12.4133943</RealTime>
+        <GameTime>00:00:12.1160000</GameTime>
+      </BestSegmentTime>
+      <SegmentHistory>
+        <Time id="0">
+          <RealTime>00:00:13.2128972</RealTime>
+        </Time>
+        <Time id="12">
+          <RealTime>00:00:13.2183146</RealTime>
+          <GameTime>00:00:12.1160000</GameTime>
+        </Time>
+      </SegmentHistory>
+    </Segment>
+    <Segment>
+      <Name>Mixup course</Name>
+      <Icon />
+      <SplitTimes>
+        <SplitTime name="Personal Best">
+          <RealTime>00:16:59.5715865</RealTime>
+          <GameTime>00:15:59.5330000</GameTime>
+        </SplitTime>
+      </SplitTimes>
+      <BestSegmentTime>
+        <RealTime>00:02:14.0080400</RealTime>
+        <GameTime>00:02:27.2000000</GameTime>
+      </BestSegmentTime>
+      <SegmentHistory>
+        <Time id="0">
+          <RealTime>00:02:28.9229119</RealTime>
+        </Time>
+        <Time id="12">
+          <RealTime>00:02:46.8016513</RealTime>
+          <GameTime>00:02:27.2000000</GameTime>
+        </Time>
+      </SegmentHistory>
+    </Segment>
+    <Segment>
+      <Name>Post-mixup hub</Name>
+      <Icon />
+      <SplitTimes>
+        <SplitTime name="Personal Best">
+          <RealTime>00:17:11.8673949</RealTime>
+          <GameTime>00:16:10.7830000</GameTime>
+        </SplitTime>
+      </SplitTimes>
+      <BestSegmentTime>
+        <RealTime>00:00:11.2511712</RealTime>
+        <GameTime>00:00:11.2500000</GameTime>
+      </BestSegmentTime>
+      <SegmentHistory>
+        <Time id="0">
+          <RealTime>00:00:11.2511712</RealTime>
+        </Time>
+        <Time id="12">
+          <RealTime>00:00:12.2958084</RealTime>
+          <GameTime>00:00:11.2500000</GameTime>
+        </Time>
+      </SegmentHistory>
+    </Segment>
+  </Segments>
+  <AutoSplitterSettings />
+</Run>
